@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "talk-to-my-books"
+version = "0.1.0"
+description = ""
+authors = ["Kartik Arcot <askarthikkumar@gmail.com>"]
+readme = "README.md"
+packages = [{include = "talk_to_my_books"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^0.27.1"
+pandas = "^1.5.3"
+Flask = "^2.2.3"
+numpy = "^1.24.2"
+llama-index = "^0.4.24"
+faiss-cpu = "^1.7.3"
+jupyter = "^1.0.0"
+html2text = "^2020.1.16"
+ebooklib = "^0.18"
+langchain = "^0.0.106"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
