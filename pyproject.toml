@@ -18,6 +18,7 @@ jupyter = "^1.0.0"
 html2text = "^2020.1.16"
 ebooklib = "^0.18"
 langchain = "^0.0.106"
+gradio = "^3.21.0"
 
 
 [build-system]
