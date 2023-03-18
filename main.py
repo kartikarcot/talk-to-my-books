@@ -7,7 +7,7 @@ import gradio as gr
 import os
 import glob
 import unittest
-DATA_PATH = "../data/epubs/"
+DATA_PATH = "./data/epubs/"
 
 def get_existing_books(path):
     # return a list of the existing books
