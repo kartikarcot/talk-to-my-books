@@ -1,13 +1,13 @@
 # create an index with the text and save it to disk in data/indexes
 from llama_index import GPTSimpleVectorIndex
 import os
-from IPython.display import Markdown, display
 os.environ["OPENAI_API_KEY"] = "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"
 import gradio as gr
 import os
 import glob
 import unittest
 DATA_PATH = "../data/epubs/"
+from Sage import Sage
 
 def get_existing_books(path):
     # return a list of the existing books
@@ -86,7 +86,7 @@ def analyze_file(file, dropdown, query):
     else:
         return err_str
 
-def create_app():
+def create_app(book_talker :Sage):
     # inputs is a list of a file input option and a dropdown option showing the already
     # existing files in the directory. The dropdown box is named "Choose From Existing Files"
     # and the file input box is named "Upload New File". inputs also has a box for input query.
@@ -99,5 +99,8 @@ def create_app():
     return app
 
 if __name__ == "__main__":
-    app = create_app()
-    app.launch()
+    book_talker = Sage(model_name = "gpt-3.5-turbo")
+    #book_talker.load_book("data/epubs/SeeingLikeAState.epub")
+    #book_talker.run('Summarize the book')
+    app = create_app(book_talker)
+    app.launch(share=True)
