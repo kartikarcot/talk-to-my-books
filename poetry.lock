@@ -820,14 +820,14 @@ files = [
 
 [[package]]
 name = "fastapi"
-version = "0.94.1"
+version = "0.95.0"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "fastapi-0.94.1-py3-none-any.whl", hash = "sha256:451387550c2d25a972193f22e408a82e75a8e7867c834a03076704fe20df3256"},
-    {file = "fastapi-0.94.1.tar.gz", hash = "sha256:4a75936dbf9eb74be5eb0d41a793adefe9f3fc6ba66dbdabd160120fd3c2d9cd"},
+    {file = "fastapi-0.95.0-py3-none-any.whl", hash = "sha256:daf73bbe844180200be7966f68e8ec9fd8be57079dff1bacb366db32729e6eb5"},
+    {file = "fastapi-0.95.0.tar.gz", hash = "sha256:99d4fdb10e9dd9a24027ac1d0bd4b56702652056ca17a6c8721eec4ad2f14e18"},
 ]
 
 [package.dependencies]
@@ -1063,14 +1063,14 @@ tqdm = ["tqdm"]
 
 [[package]]
 name = "gradio"
-version = "3.21.0"
+version = "3.22.0"
 description = "Python library for easily interacting with trained machine learning models"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "gradio-3.21.0-py3-none-any.whl", hash = "sha256:8d426ee65ffa982723de3c813af2eaa8055fb1abb213298e0450c12cc85fe0c1"},
-    {file = "gradio-3.21.0.tar.gz", hash = "sha256:1b0fc11e37974e693cb8e302ba429a8a188b8139d2dad96a58acceeebd5c70cb"},
+    {file = "gradio-3.22.0-py3-none-any.whl", hash = "sha256:02a2a22289fdadc41d9fe25526ba84a17e79b8a6bf3c8ac17d9d2d5750021540"},
+    {file = "gradio-3.22.0.tar.gz", hash = "sha256:3b914186df86a74142ebee5d14ffdec3c71c5cf11324c07cbbaddbbb5bf0f4c7"},
 ]
 
 [package.dependencies]
@@ -2662,11 +2662,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.20.3", markers = "python_version < \"3.10\""},
-    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
-    {version = ">=1.23.2", markers = "python_version >= \"3.11\""},
-]
+numpy = {version = ">=1.20.3", markers = "python_version < \"3.10\""}
 python-dateutil = ">=2.8.1"
 pytz = ">=2020.1"
 
@@ -4172,5 +4168,5 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.9"
-content-hash = "fe957891e089cd0a93dd3945539cf16a91ae084fb1f84ca732eab4d65c41c28d"
+python-versions = "3.9.12"
+content-hash = "e23787891e405cd3a7ed76e535163a582dc56996f52e4cf944c2f3607d9f4fbb"
