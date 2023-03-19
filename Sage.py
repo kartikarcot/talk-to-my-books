@@ -23,11 +23,11 @@ class Sage:
         self.load_model()
         
 
-    def load_book(self, book_path: str) -> None:
+    def load_book(self, book_file_path_list: list = [""], book_dir_path: str = "") -> None:
         """
         Loads the book document from the given file path and create index.
         """
-        self._docs = SimpleDirectoryReader(book_path).load_data()
+        self._docs = SimpleDirectoryReader(input_dir = book_dir_path, input_files = book_file_path_list).load_data()
         self._index = GPTSimpleVectorIndex(documents=self._docs)
         
     def load_model(self) -> None:
@@ -46,5 +46,5 @@ class Sage:
 
 if __name__ == "__main__":
   book_talker = Sage(model_name = "gpt-3.5-turbo")
-  book_talker.load_book("test_data/epubs/SeeingLikeAState")
+  book_talker.load_book(book_file_path_list = ["test_data/epubs/SeeingLikeAState/SeeingLikeAState.epub"])
   print(book_talker.run('Summarize the book'))
