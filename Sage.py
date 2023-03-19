@@ -7,7 +7,6 @@ from langchain.chat_models import ChatOpenAI
 from llama_index import GPTTreeIndex
 import os
 from llama_index import SummaryPrompt, QuestionAnswerPrompt
-import ipdb; ipdb.set_trace()
 # set environment variable with OPENAI_API_KEY
 os.environ["OPENAI_API_KEY"] = "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"
 
