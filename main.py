@@ -13,7 +13,7 @@ def create_app():
                         label="Choose From Existing Files"),
             gr.Textbox(label="Query")]
     outputs = gr.HTML()
-    app = gr.Interface(analyze_file, inputs, outputs, title="Talk To My Books", description = description)
+    app = gr.Interface(analyze_file, inputs, outputs, title="Talk To My Books", description = description).queue()
     return app
 
 if __name__ == "__main__":
