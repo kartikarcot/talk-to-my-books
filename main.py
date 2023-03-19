@@ -75,7 +75,7 @@ def answer_query(filepath, query):
     # Get the index for the file
     index = GPTSimpleVectorIndex.load_from_disk(get_or_create_index(filepath))
     # Use the index to answer the query
-    return f"<b>{index.query(query)}</b>"
+    return f"<b>{index.query(query,similarity_top_k=1)}</b>"
 
 
 def analyze_file(file, dropdown, query):
