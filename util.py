@@ -5,7 +5,8 @@ from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
 import os
 from IPython.display import Markdown, display
 from shutil import copy
-os.environ["OPENAI_API_KEY"] = "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"
+
+
 DATA_PATH = "./data/epubs/"
 
 
